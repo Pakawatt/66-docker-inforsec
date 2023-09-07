@@ -2,7 +2,7 @@ version: '3'
 
 services: 
   db:
-    image: postgres:latest
+    image: postgres:14
     container_name: my-db
     ports:
       - 54321:5432
@@ -11,7 +11,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       
   pg-admin:    
-    image: dpage/pgadmin4:14
+    image: dpage/pgadmin4:latest
     container_name: pg-admin-docker    
     ports:       
       - 4433:443       
